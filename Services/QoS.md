@@ -3,84 +3,20 @@
 - Lack of bandwidth
 - Latency & jitter (variation in latency)
 - Packet loss
-### What are the 3 QoS Models?
+## What are the 3 QoS Models?
 - Best effort
 - Intergrated Services (IntServ)
 - Differentiated Services (DiffServ)
-
+## Definitions
 **Buffer:** Physical memory used to store packets before and after a forwarding decision is made.
 
 **Queue:** A logical part of the shared memory buffers.
-
- 
-
-**How do routers deal with packets?**
-
--   Packet arrives on ingress interface (RX-Ring)
-
--   Packet Queued in memory buffer
-
--   Forwarding decision made
-
--   Packet placed on hardware transmit ring
-
--   Packet transmitted onto egress media
-
- 
-
-**How do switches deal with packets (shared memory)?**
-
--   Packet arrives on ingress interface
-
--   Interface/module ASIC immediately forwards packet into common, shared memory pool
-
--   Forwarding decision made by forwarding ASIC
-
--   Memory ownership of packet buffer transferred to egress interface
-
--   Packet transmitted onto egress media
-
- 
-
-**How do switches deal with packets (distributed memory)?**
-
--   Packet arrives on ingress interface
-
--   Interface/module ASIC places packet into a queue
-
--   Forwarding decision made by forwarding ASIC
-
--   Packet transmitted (along with lookup result) onto shared ring/bus to all egress interfaces
-
--   Appropriate egress interface queues and then schedules the packet
-
- 
-
-**Queueing and Congestions:**
-
--   DMA = Direct Memory Access
-
--   When egress traffic cannot be immediately transmitted, it is placed in an egress queue
 
 -   Without QoS = queue is one large piece of memory, First In First Out (FIFO)
 
 -   With QoS = Can control characteristics of the queue
 
- 
-
-**What is affected by QoS?**
-
--   Bandwidth
-
--   Delay
-
--   Jitter (inconsistent delay)
-
--   Loss/drops
-
- 
-
-**Classification:**
+## Classification:
 
 -   Traffic divided into classes
 
@@ -96,25 +32,19 @@
 
     -   Application signatures (NBAR)
 
- 
-
-**Layer 2 Classification:**
+### Layer 2 Classification:
 
 -   Ethernet frames contain no distinctive "priority" filed unless carried by 802.1Q or ISL trunks
 
 -   Class of Service (CoS) byte
 
- 
-
-**Layer 3 Classification:**
+### Layer 3 Classification:
 
 -   Both IPv4 & IPv6 packets contain a byte used for indicating relative priority of a packet
 
 -   Type of Service (ToS) byte
 
- 
-
-**NBAR:**
+### NBAR:
 
 -   Network-Based Application Recognition (NBAR)
 
@@ -128,7 +58,7 @@
 
  
 
-**Trust Boundaries:**
+## Trust Boundaries:
 
 -   Some host devices may mark traffic upon creation
 
@@ -144,15 +74,15 @@
 
  
 
-**DSCP:**
+## DSCP:
 
 -   DSCP = Differentiated Services Code Point
 
     -   First 6 bits of the ToS bytes
 
-![alt text](Media/QoS_1.svg "ToS Byte Format")
+<img src="Media/QoS_1.svg" width="450" title="ToS Byte Structure">
 
--   There are 4 high -level traffic classes defined for DSCP per-hop behaviours:
+-   There are 4 high-level traffic classes defined for DSCP per-hop behaviours:
 
     -   Default Forwarding (DH) PHB
 
@@ -178,9 +108,7 @@
 
             -   E.g. CS3 means a CS value of 3 and an AF value of 0 (DSCP value of 011000xx)
 
- 
-
-**Congestion Avoidance:**
+## Congestion Avoidance:
 
 -   Prevent queues becoming congested
 
@@ -192,9 +120,7 @@
 
     -   The egress queue (queueing and shaping)
 
- 
-
-**Committed Information Rate (CIR) - Policing and Shaping:**
+## Committed Information Rate (CIR) - Policing and Shaping:
 
 -   Between ISP and customer there is an agreed CIR (e.g. 50 Mbps)
 
@@ -210,9 +136,9 @@
 
         -   Customer shapes egress traffic towards ISP
 
-![alt text](https://github.com/richwebb8/CCNP-Study-Notes/Services/Media/QoS_2.jpg "Shaping Vs Policing")
+<img src="Media/QoS_2.svg" width="450" title="ToS Byte Structure">
 
-**Queueing-Based Congestion Avoidance:**
+## Queueing-Based Congestion Avoidance:
 
 -   Set of features to pre-emptively drop traffic within queues
 
@@ -228,9 +154,7 @@
 
     -   WRED
 
- 
-
-**WRED & WTD Terminology:**
+##  WRED & WTD Terminology:
 
 -   Drop Thresholds
 
@@ -238,9 +162,7 @@
 
     -   Maximum = Point at which 100% of matched traffic is dropped
 
- 
-
-**WRED:**
+## WRED:
 
 -   Random packet drops start at the min-threshold
 
@@ -248,9 +170,7 @@
 
 -   After max-threshold reached, WRED drops 100% of all subsequent packets received
 
- 
-
-**Queueing & Scheduling:**
+## Queueing & Scheduling:
 
 -   **Scheduling**: How is the queue serviced?
 
