@@ -34,7 +34,7 @@
 
 ### Layer 2 Classification:
 
--   Ethernet frames contain no distinctive "priority" filed unless carried by 802.1Q or ISL trunks
+-   Ethernet frames contain no distinctive "priority" field unless carried by 802.1Q or ISL trunks
 
 -   Class of Service (CoS) byte
 
