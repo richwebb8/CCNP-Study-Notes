@@ -80,7 +80,9 @@
 
     -   First 6 bits of the ToS bytes
 
+<p align="center">
 <img src="Media/QoS_1.svg" width="450" title="ToS Byte Structure">
+</p>
 
 -   There are 4 high-level traffic classes defined for DSCP per-hop behaviors:
 
@@ -136,7 +138,9 @@
 
         -   Customer shapes egress traffic towards ISP
 
+<p align="center">
 <img src="Media/QoS_2.svg" width="450" title="ToS Byte Structure">
+</p>
 
 ## Queueing-Based Congestion Avoidance:
 
