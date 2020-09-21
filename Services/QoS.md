@@ -150,7 +150,7 @@
 
     -   First 6 bits of the ToS bytes
 
-![alt text](https://github.com/richwebb8/CCNP-Study-Notes/Services/Media/QoS_1.jpg "ToS Byte Format")
+![alt text](Media\QoS_1.svg "ToS Byte Format")
 
 -   There are 4 high -level traffic classes defined for DSCP per-hop behaviours:
 
