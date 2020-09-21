@@ -5,7 +5,7 @@
 - Packet loss
 ## What are the 3 QoS Models?
 - Best effort
-- Intergrated Services (IntServ)
+- Integrated Services (IntServ)
 - Differentiated Services (DiffServ)
 ## Definitions
 **Buffer:** Physical memory used to store packets before and after a forwarding decision is made.
@@ -82,7 +82,7 @@
 
 <img src="Media/QoS_1.svg" width="450" title="ToS Byte Structure">
 
--   There are 4 high-level traffic classes defined for DSCP per-hop behaviours:
+-   There are 4 high-level traffic classes defined for DSCP per-hop behaviors:
 
     -   Default Forwarding (DH) PHB
 
@@ -140,7 +140,7 @@
 
 ## Queueing-Based Congestion Avoidance:
 
--   Set of features to pre-emptively drop traffic within queues
+-   Set of features to preemptively drop traffic within queues
 
 -   On switches:
 
