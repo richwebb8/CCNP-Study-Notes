@@ -82,8 +82,8 @@
     - *MTU Size:* Not technically compulsory but will cause the routers to be stuck in the Exstart/Exchange stage.
 
 ## Configuring Hello and Dead Intervals
-<pre>
 - Interface level commands:
+<pre>
 (config)# <b>ip ospf hello-interval</b> seconds
 </pre>
 <pre>
