@@ -130,4 +130,4 @@
 <img src="Media/OSPF_NEI_3.svg" width="450" title="OSPF Init">
 </p>
 
-5. **Exstart:**
+5. **Exstart:** One router will become the primary and the other will become secondary. The primary router will poll the secondary for information. Database Description (DBD) packets are exchanged between the routers.
